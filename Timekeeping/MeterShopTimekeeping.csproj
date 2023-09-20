@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEE677A2-E356-4872-A94A-BA1F2DB03200}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MeterShopTimekeeping</RootNamespace>
+    <AssemblyName>MeterShopTimekeeping</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\project_files\MeterShopTimeKeeping\Install Files\PROD\V1.0.0.4\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.4</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>10AAB32134898122BC97D208F043A9912A0A4FA7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MeterShopTimekeeping_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbHandler.cs" />
+    <Compile Include="dbHandler2.cs" />
+    <Compile Include="FrmAddLunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddLunch.Designer.cs">
+      <DependentUpon>FrmAddLunch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddPayCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddPayCode.Designer.cs">
+      <DependentUpon>FrmAddPayCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddTimesheetComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddTimesheetComment.Designer.cs">
+      <DependentUpon>FrmAddTimesheetComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddVacation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddVacation.Designer.cs">
+      <DependentUpon>FrmAddVacation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddVacationComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddVacationComment.Designer.cs">
+      <DependentUpon>FrmAddVacationComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmApproverAddSickDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmApproverAddSickDay.Designer.cs">
+      <DependentUpon>FrmApproverAddSickDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDenyRecall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDenyRecall.Designer.cs">
+      <DependentUpon>FrmDenyRecall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDenyTimesheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDenyTimesheet.Designer.cs">
+      <DependentUpon>FrmDenyTimesheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditException.Designer.cs">
+      <DependentUpon>FrmEditException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditLunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditLunch.Designer.cs">
+      <DependentUpon>FrmEditLunch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddTimeSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddTimeSheet.Designer.cs">
+      <DependentUpon>FrmAddTimeSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditPayCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditPayCode.Designer.cs">
+      <DependentUpon>FrmEditPayCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditTimesheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditTimesheet.Designer.cs">
+      <DependentUpon>FrmEditTimesheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddException.Designer.cs">
+      <DependentUpon>FrmAddException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditUser.Designer.cs">
+      <DependentUpon>FrmEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditVacation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditVacation.Designer.cs">
+      <DependentUpon>FrmEditVacation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPayCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPayCodes.Designer.cs">
+      <DependentUpon>FrmPayCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecallRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecallRequest.Designer.cs">
+      <DependentUpon>FrmRecallRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTimesheetsTimeKeepers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTimesheetsTimeKeepers.Designer.cs">
+      <DependentUpon>FrmTimesheetsTimeKeepers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTimesheetsUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTimesheetsUsers.Designer.cs">
+      <DependentUpon>FrmTimesheetsUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTimesheetsApprovers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTimesheetsApprovers.Designer.cs">
+      <DependentUpon>FrmTimesheetsApprovers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsers.Designer.cs">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddLunch.resx">
+      <DependentUpon>FrmAddLunch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddPayCode.resx">
+      <DependentUpon>FrmAddPayCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddTimesheetComment.resx">
+      <DependentUpon>FrmAddTimesheetComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddVacation.resx">
+      <DependentUpon>FrmAddVacation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddVacationComment.resx">
+      <DependentUpon>FrmAddVacationComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmApproverAddSickDay.resx">
+      <DependentUpon>FrmApproverAddSickDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDenyRecall.resx">
+      <DependentUpon>FrmDenyRecall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDenyTimesheet.resx">
+      <DependentUpon>FrmDenyTimesheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditException.resx">
+      <DependentUpon>FrmEditException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditLunch.resx">
+      <DependentUpon>FrmEditLunch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddTimeSheet.resx">
+      <DependentUpon>FrmAddTimeSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddException.resx">
+      <DependentUpon>FrmAddException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditPayCode.resx">
+      <DependentUpon>FrmEditPayCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditTimesheet.resx">
+      <DependentUpon>FrmEditTimesheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditUser.resx">
+      <DependentUpon>FrmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditVacation.resx">
+      <DependentUpon>FrmEditVacation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPayCodes.resx">
+      <DependentUpon>FrmPayCodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecallRequest.resx">
+      <DependentUpon>FrmRecallRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTimesheetsTimeKeepers.resx">
+      <DependentUpon>FrmTimesheetsTimeKeepers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTimesheetsUsers.resx">
+      <DependentUpon>FrmTimesheetsUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTimesheetsApprovers.resx">
+      <DependentUpon>FrmTimesheetsApprovers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsers.resx">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="MeterShopTimekeeping_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+</Project>
